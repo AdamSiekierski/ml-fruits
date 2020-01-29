@@ -1,0 +1,4 @@
+.vscode/
+.DS_Store
+fruits_venv/
+fruits_model.h5
