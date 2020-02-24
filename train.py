@@ -41,4 +41,4 @@ model.compile(optimizer='adam',
 
 model.fit(train_images, train_labels, epochs=10)
 
-model.save('fruits_model.h5')
+model.save('lib/fruits_model.h5')

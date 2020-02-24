@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pathlib
 
-model = keras.models.load_model('fruits_model.h5')
+model = keras.models.load_model('lib/fruits_model.h5')
 
 print('Loading dataset...')
 data_dir = pathlib.Path('./fruits_dataset_test')
