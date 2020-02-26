@@ -25,12 +25,16 @@ train_images, train_labels = next(train_data_gen)
 # Create the model
 
 model = keras.Sequential([
-  keras.layers.Conv2D(32, 3, activation="relu", input_shape=(224, 224, 3)),
+  keras.layers.Conv2D(64, 3, activation="relu", input_shape=(224, 224, 3)),
+  keras.layers.MaxPool2D(2),
+  keras.layers.Conv2D(32, 3, activation="relu"),
   keras.layers.MaxPool2D(2),
   keras.layers.Conv2D(32, 3, activation="relu"),
   keras.layers.MaxPool2D(2),
   keras.layers.Flatten(),
   keras.layers.Dense(512, activation="relu"),
+  keras.layers.Dropout(0.5),
+  keras.layers.Dense(64, activation="relu"),
   keras.layers.Dropout(0.5),
   keras.layers.Dense(2, activation="softmax")
 ])

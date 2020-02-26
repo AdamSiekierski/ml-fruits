@@ -41,7 +41,7 @@ def predict():
 
       prediction = model.predict(image)[0]
       result = class_names[np.argmax(prediction)]
-      return jsonify({ "message": f"Predicred, that given image is {result}" })
+      return jsonify({ "message": f"Predicred, that given image is {result}", "predictions": prediction.tolist() })
 
 if __name__ == "__main__":
 	print(("* Loading Keras model and Flask starting server..."
